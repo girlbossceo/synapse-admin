@@ -42,6 +42,8 @@ const optionalFields = [
   "guest",
   "admin",
   "deactivated",
+  "erased",
+  "locked",
   "avatar_url",
   "password",
 ].sort();
@@ -143,6 +145,8 @@ const FilePicker = props => {
       is_guest: 0,
       admin: 0,
       deactivated: 0,
+      erased: 0,
+      locked: 0,
       password: 0,
       avatar_url: 0,
       id: 0,
@@ -171,7 +175,7 @@ const FilePicker = props => {
         delete line.is_admin;
       }
 
-      ["is_guest", "admin", "deactivated"].forEach(f => {
+      ["is_guest", "admin", "deactivated", "erased", "locked"].forEach(f => {
         if (line[f] === "true") {
           stats[f]++;
           line[f] = true; // we need true booleans instead of strings

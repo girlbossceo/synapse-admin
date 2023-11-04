@@ -107,9 +107,11 @@ const en = {
         is_guest: "Guest",
         admin: "Server Administrator",
         deactivated: "Deactivated",
+        locked: "Locked",
         erased: "Erased",
         guests: "Show guests",
         show_deactivated: "Show deactivated users",
+        show_locked: "Show locked users",
         user_id: "Search user",
         displayname: "Displayname",
         password: "Password",
@@ -130,6 +132,9 @@ const en = {
       },
       action: {
         erase: "Erase user data",
+        update: {
+          locked_and_deactivated: "A user cannot be deactivated and locked.",
+        },
       },
     },
     rooms: {
